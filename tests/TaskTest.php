@@ -73,6 +73,7 @@
         {
             ///   Arrange   ///
             $description = "Wash the dog";
+            $id = 1;
             $test_task = new Tasks($description, $id);
 
             ///   Act   ///

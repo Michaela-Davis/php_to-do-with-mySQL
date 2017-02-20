@@ -36,6 +36,7 @@ class Tasks
     function save()
     {
         $GLOBALS['DB']->exec("INSERT INTO tasks (description) VALUES ('{$this->getDescription()}')");
+        $this->id = $GLOBALS['DB']->lastInsertId();
     }
 
     static function getAll()
@@ -44,7 +45,8 @@ class Tasks
         $tasks = array();
         foreach ($returned_tasks as $task) {
             $description = $task['description'];
-            $new_task = new Tasks($description);
+            $id = $task['id'];
+            $new_task = new Tasks($description, $id);
             array_push($tasks, $new_task);
         }
         return $tasks;

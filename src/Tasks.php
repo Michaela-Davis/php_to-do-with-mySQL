@@ -22,16 +22,7 @@ class Tasks
         $this->description = (string) $new_description;
     }
 
-    ///   id Getter and Setter   ///
-    function getId()
-    {
-        return $this->id;
-    }
 
-    function setId($new_id)
-    {
-        $this->id = (string) $new_id;
-    }
 
     function save()
     {

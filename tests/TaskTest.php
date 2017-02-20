@@ -83,23 +83,23 @@
             $this->assertEquals(1, $result);
         }
 
-        // function test_find()
-        // {
-        //     ///   Arrange   ///
-        //     $description = "Wash the dog";
-        //     $description2 = "Water the lawn";
-        //     $test_task = new Tasks($description);
-        //     $test_task->save();
-        //     $test_task2 = new Tasks($description2);
-        //     $test_task2->save();
-        //
-        //     ///   Act   ///
-        //     $id = $test_task->getId();
-        //     $result = Tasks::find($id);
-        //
-        //     ///   Assert   ///
-        //     $this->assertEquals($test_task, $result);
-        // }
+        function test_find()
+        {
+            ///   Arrange   ///
+            $description = "Wash the dog";
+            $description2 = "Water the lawn";
+            $test_task = new Tasks($description);
+            $test_task->save();
+            $test_task2 = new Tasks($description2);
+            $test_task2->save();
+
+            ///   Act   ///
+            $id = $test_task->getId();
+            $result = Tasks::find($id);
+
+            ///   Assert   ///
+            $this->assertEquals($test_task, $result);
+        }
     }
 
 ?>
